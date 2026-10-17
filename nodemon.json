@@ -1,0 +1,7 @@
+{
+  "watch": ["src", "build-web.mjs", "package.json"],
+  "ignore": ["src/generated/**", "out/**", "node_modules/**"],
+  "ext": "ts,js,mjs,html,json",
+  "delay": "800",
+  "exec": "npm run scrypted-deploy ${SCRYPTED_HOST:-127.0.0.1}"
+}
