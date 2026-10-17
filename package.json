@@ -56,5 +56,13 @@
     "LICENSE",
     "build-web.mjs",
     "tsconfig.json"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assueromorais/scrypted-camera-grid.git"
+  },
+  "bugs": {
+    "url": "https://github.com/assueromorais/scrypted-camera-grid/issues"
+  },
+  "homepage": "https://github.com/assueromorais/scrypted-camera-grid#readme"
 }
