@@ -1,0 +1,58 @@
+{
+  "name": "@assuero/scrypted-camera-grid",
+  "version": "0.0.1",
+  "description": "Grade multi-câmera ao vivo dentro do Scrypted, via WebRTC nativo.",
+  "author": "Assuéro Morais",
+  "license": "MIT",
+  "scripts": {
+    "build:web": "node build-web.mjs",
+    "prebuild": "npm run build:web",
+    "build": "scrypted-webpack",
+    "prescrypted-vscode-launch": "npm run build:web && scrypted-webpack",
+    "scrypted-vscode-launch": "scrypted-deploy-debug",
+    "prescrypted-deploy-debug": "npm run build:web && scrypted-webpack",
+    "scrypted-deploy-debug": "scrypted-deploy-debug",
+    "prescrypted-deploy": "npm run build:web && scrypted-webpack",
+    "scrypted-deploy": "scrypted-deploy",
+    "scrypted-debug": "scrypted-debug",
+    "scrypted-readme": "scrypted-readme",
+    "scrypted-package-json": "scrypted-package-json",
+    "prepublishOnly": "NODE_ENV=production npm run build:web && NODE_ENV=production scrypted-webpack"
+  },
+  "scrypted": {
+    "name": "Camera Grid",
+    "type": "API",
+    "interfaces": [
+      "HttpRequestHandler",
+      "LauncherApplication"
+    ]
+  },
+  "dependencies": {
+    "@scrypted/client": "^1.3.26"
+  },
+  "devDependencies": {
+    "@scrypted/sdk": "^0.5.59",
+    "@scrypted/types": "^0.5.44",
+    "esbuild": "^0.24.2",
+    "esbuild-plugins-node-modules-polyfill": "^1.8.3",
+    "terser-webpack-plugin": "^5.6.1",
+    "typescript": "^5.7.2",
+    "webpack-bundle-analyzer": "^5.4.0"
+  },
+  "keywords": [
+    "scrypted",
+    "scrypted-plugin",
+    "camera",
+    "grid",
+    "nvr",
+    "webrtc"
+  ],
+  "files": [
+    "out",
+    "src",
+    "README.md",
+    "LICENSE",
+    "build-web.mjs",
+    "tsconfig.json"
+  ]
+}
