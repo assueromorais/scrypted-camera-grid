@@ -17,7 +17,7 @@
     "scrypted-debug": "scrypted-debug",
     "scrypted-readme": "scrypted-readme",
     "scrypted-package-json": "scrypted-package-json",
-    "prepublishOnly": "NODE_ENV=production npm run build:web && NODE_ENV=production scrypted-webpack",
+    "prepublishOnly": "npm run build:web && scrypted-webpack",
     "dev": "nodemon"
   },
   "scrypted": {
@@ -50,7 +50,8 @@
     "webrtc"
   ],
   "files": [
-    "out",
+    "out/main.nodejs.js",
+    "out/plugin.zip",
     "src",
     "README.md",
     "LICENSE",
