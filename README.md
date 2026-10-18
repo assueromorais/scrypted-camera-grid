@@ -7,7 +7,7 @@ soma uma página de grade. Zero RTSP/go2rtc próprio: usa o **WebRTC nativo** do
 ## Arquitetura
 
 ```
-browser (/endpoint/@assuero/scrypted-camera-grid/public/)
+browser (/endpoint/scrypted-camera-grid/public/)
   app.js  ──@scrypted/client (mesma origem, sessão logada)──> systemManager
           ──startRTCSignalingSession──> cada câmera ──WebRTC──> <video>
 ```

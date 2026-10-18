@@ -1,5 +1,5 @@
 {
-  "name": "@assuero/scrypted-camera-grid",
+  "name": "scrypted-camera-grid",
   "version": "0.0.1",
   "description": "Grade multi-câmera ao vivo dentro do Scrypted, via WebRTC nativo.",
   "author": "Assuéro Morais",
