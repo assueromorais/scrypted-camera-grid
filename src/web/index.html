@@ -30,6 +30,13 @@
     .cell .ptz button:hover { background:var(--accent); }
     .cell .ptz button:disabled { opacity:.5; cursor:wait; }
     .cell .ptz .ptz-up { grid-area:1/2; } .cell .ptz .ptz-left { grid-area:2/1; } .cell .ptz .ptz-right { grid-area:2/3; } .cell .ptz .ptz-down { grid-area:3/2; }
+    .controls button#gear { background:var(--panel); color:var(--text); border:1px solid var(--line); border-radius:6px; padding:4px 9px; cursor:pointer; font-size:15px; }
+    .controls button#gear:hover { border-color:var(--accent); }
+    .settings { position:absolute; right:16px; top:52px; background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 12px; min-width:220px; display:none; z-index:20; box-shadow:0 8px 24px rgba(0,0,0,.4); }
+    .settings.open { display:block; }
+    .settings .settings-title { color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.04em; margin-bottom:8px; }
+    .settings .settings-row { display:flex; align-items:center; gap:8px; padding:4px 0; cursor:pointer; font-size:14px; }
+    .settings .settings-row input { accent-color:var(--accent); }
     #status { padding:0 16px 16px; color:var(--muted); font-size:13px; }
   </style>
 </head>
@@ -46,8 +53,10 @@
           <option value="4">4</option>
         </select>
       </label>
+      <button id="gear" title="Selecionar câmeras">⚙</button>
     </div>
   </header>
+  <div id="settings" class="settings"></div>
   <main id="grid" aria-busy="true"></main>
   <div id="status">carregando…</div>
   <script src="app.js"></script>

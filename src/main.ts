@@ -20,7 +20,7 @@ class CameraGrid extends ScryptedDeviceBase implements HttpRequestHandler, Launc
       this.applicationInfo = {
         name: "Camera Grid",
         description: "Grade multi-câmera ao vivo (WebRTC nativo)",
-        icon: "mdi-view-grid",
+        icon: "fa fa-th-large",
         href,
       };
       this.console.log(`Camera Grid em: ${href}`);

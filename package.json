@@ -1,6 +1,6 @@
 {
   "name": "scrypted-camera-grid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Grade multi-câmera ao vivo dentro do Scrypted, via WebRTC nativo.",
   "author": "Assuéro Morais",
   "license": "MIT",
